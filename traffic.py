@@ -1,7 +1,7 @@
 addrs = []
 
 def learnAddr(src, input_port):
-    return None
+    return
 
 def getAddr(dest):
     return None
