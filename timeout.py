@@ -12,7 +12,7 @@ def learnAddr(src, input_port):
     global addrs
     now = datetime.datetime.now()
     addrs = [addr for addr in addrs
-        if (now - addr.timestamp).total_seconds() < 10]
+        if (now - addr.timestamp).total_seconds() < 10 and addr.addr != src]
     addrs = addrs + [Address(src, input_port, now)]
 
 def getAddr(dest):
