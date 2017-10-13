@@ -27,5 +27,8 @@ def getAddr(dest):
     global addrs
     record = next((addr for addr in addrs if addr.addr == dest), None)
     if record != None:
+        addrs.pop(addrs.index(record))
+        record.timestamp = datetime.datetime.now()
+        addrs.append(record)
         return record.port
     return None
